@@ -4,7 +4,7 @@ kubectl apply -f my-pod.yaml
 ```
 ### verify pod
 ```bash
-kubectl get pod
+kubectl get pods
 ```
 ### executing command in pod
 ```bash
