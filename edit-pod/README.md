@@ -16,5 +16,7 @@ spec:
     image: nginx:latest
 cat my-new-pod.yaml
 kubectl delete pod my-nginx
-kubectl create -f my-new-pod.yaml
+kubectl create -f my-new-pod.
+kubectl get pods
+kubectl describe pod my-nginx
 ```
