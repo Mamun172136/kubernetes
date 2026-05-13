@@ -14,5 +14,7 @@ spec:
   containers:
   - name: nginx
     image: nginx:latest
-
+cat my-new-pod.yaml
+kubectl delete pod my-nginx
+kubectl create -f my-new-pod.yaml
 ```
