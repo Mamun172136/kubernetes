@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          resources:
+            requests:
+              memory: "64Mi" # The minimum memory each Pod requires
+              cpu: "50m" # The minimum CPU each Pod requires (50 millicores)
+            limits:
+              memory: "128Mi" # The maximum memory allowed per Pod
+              cpu: "100m" # The maximum CPU allowed per Pod
